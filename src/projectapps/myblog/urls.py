@@ -14,12 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, re_path, include
+from django.urls import path, re_path
+
+#connecting incident_create to usersapp
+from .views import PostList, PostDetail
+
+# helps with video upload
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('projectapps.usersapp.urls')), #appended projectsapp to usersapp
-    path('myblog/', include('projectapps.myblog.urls')),
-    path('admin/', admin.site.urls),
-    #using 're-path' instead of 'url'
-    re_path(r'^tz_detect/', include('tz_detect.urls')),
-]
+    path('', PostList.as_view(), name='bloghome'),
+    path('<slug:slug>/', PostDetail.as_view(), name='blogpost_detail'),
+]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

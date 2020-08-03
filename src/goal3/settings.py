@@ -38,7 +38,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-   # 'usersapp.apps.UsersappConfig',
+   # 'usersapp.apps.UsersappConfig', # correct usage is beneath
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     #apps should be defined here
     'projectapps.usersapp',
+    'projectapps.myblog',
 ]
 
 # Creating Bootstrap4 block and turning jquery to true
