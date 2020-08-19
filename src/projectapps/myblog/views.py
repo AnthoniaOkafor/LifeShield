@@ -22,16 +22,17 @@ class PostList(generic.ListView):
 def post_detail(request, slug):
     template_name = 'blogpost_detail.html'
     post = get_object_or_404(Post, slug=slug)
-    comments = post.comments.filter(active=True)
+    comments = post.comments.filter(active=True) #retreive all approved comments of a post 
     new_comment = None
     # Comment posted
     if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
+        comment_form = CommentForm(data=request.POST) #the comment_form attribute holds the data of user input
         if comment_form.is_valid():
 
             # Create Comment object but don't save to database yet
             new_comment = comment_form.save(commit=False)
-            # Assign the current post to the comment
+            # (Assign the current post to the comment) 
+            # Since comment has a field named post, we are retrieving the post of new_comment and assigning it to post
             new_comment.post = post
             # Save the comment to the database
             new_comment.save()
