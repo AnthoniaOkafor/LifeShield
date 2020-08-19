@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, re_path
 
 #connecting incident_create to usersapp
-from .views import PostList, PostDetail
+from .views import PostList, post_detail
 
 # helps with video upload
 from django.conf import settings
@@ -25,5 +25,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', PostList.as_view(), name='bloghome'),
-    path('<slug:slug>/', PostDetail.as_view(), name='blogpost_detail'),
+   # path('<slug:slug>/', PostDetail.as_view(), name='blogpost_detail'),
+    path('<slug:slug>/', post_detail, name='blogpost_detail'),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
