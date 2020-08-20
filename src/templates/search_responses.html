@@ -1,7 +1,11 @@
+{% extends "base.html" %} 
+
 {% load bootstrap4 %}       {# import bootstrap4 #}
 {% bootstrap_css %}         {# Embed Bootstrap CSS #}
 {% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
 
+{% load static %}
+{% block content %}
 
 <div class="container-fluid">
     <div class="container">
@@ -82,3 +86,6 @@
 </div>
 {% load tz_detect %}
 {% tz_detect %}
+
+
+{% endblock %}

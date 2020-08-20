@@ -8,7 +8,7 @@
         <div class="row row-header">
             <div class="col-12">
                     <h2> We help you get help. </h2>
-                     <p> Find the Nearest Police Station, Hotel and Hospital </p>
+                     <p> Find the Nearest Police Station, Hotel and Hospital. </p>
             </div>
         </div>
     </div>
@@ -18,25 +18,29 @@
 
 <div class="container">
     <div class="direction-container">
-    <div class="row mt-5 mb-5">
+    <div class="row mt-5 mb-2">
         <div class="col-md-6" >
-           <h3>We are a humanitarian link <br> between the digital world <br> and disaster response</h3><br>
+           <h3>We are a humanitarian link <br> between the digital world <br> and disaster response.</h3><br>
            <div>
                 <p class="text-justify">LifeShield <i>Created for Accident Emergency purpose </i> 
-                    is a social road accident response web-based application and targets four main functionalities: To inform road users accident-prone areas as well as real-time dangers on the road.   
-                    Road users would be notified when approaching accident-prone areas or danger zones. Ability to locate and/ or report road injuries and death. Ability to analyse and visualize accident data to understand trends and causes of road injuries and deaths
+                    is a social road accident response web-based application. Our functionalities are: To provide real-time information on road accidents, 
+                    to alert road users of accident-prone areas as well as danger-zones whilst on the road, to enable accidents to be reported to appropriate authorities 
+                    and / or response teams, and to help authorities and / or respond teams respond to accidents and monitor occurrences.
                 </p>
            </div>
-           <div><h4 id="help">NEED help? <br> LIFESHIELD HAS COME TO HELP</h4> <br> </div>
-           <h4>Click the button below to find the nearest hospital, police station or Hotel</h4> <br>
-           <button class="btn btn-primary" type="submit">Report Accident</button>
-           <button class="btn btn-primary" type="submit">Respond to Accident</button>
         </div>
-
-        <div class="col-md-6 mt-sm-3">
-           
+        <div class="col-md-6 mt-sm-3 mb-sm-3">
             <img src="{% static 'img/app2.png' %}" alt="">
         </div>
+        <div class="col-md-6 mb-sm-3">
+           <div><h4 id="help">NEED help? <br> LIFESHIELD HAS COME TO HELP</h4> <br> </div>
+           <h4>Click the button below to find the nearest hospital, police station or Hotel</h4> <br>
+           <button class="btn btn-primary" type="submit"><a href="{% url 'incident_create' %}">Report Accident</a></button>
+           <button class="btn btn-primary" type="submit"><a href="{% url 'search_responses' %}">Respond to Accident</a></button>
+        </div>
+    </div>
+
+        
     </div>
 </div>
 </div> 
