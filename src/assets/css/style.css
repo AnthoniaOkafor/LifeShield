@@ -8,30 +8,18 @@
 }
 body
 {
-    
+    background-image: url(../ZoitTemplate/img/background.png);
+    background-color: whitesmoke;
     height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    /*background-color: whitesmoke;*/
 }
-.navbar-dark
+.menu-bar
 {
+    background:#3b5998;
     text-align: center;
-}
-
-nav {
-
-  background-color:#3b5998 !important;
-}
-
-.jumbotron {
-  margin: 0px auto;
-  padding: 90px 30px 15px;;
-  background-color: orange;
-  text-align: center;
-  
 }
 .menu-bar ul
 {
@@ -79,7 +67,7 @@ nav {
     display: block;
 }
 h5 {
-  color: #3b5998;
+  text-shadow: 2px 2px red;
   text-transform: uppercase;
 }
 

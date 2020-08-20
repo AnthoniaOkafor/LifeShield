@@ -8,15 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' }}" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ 'https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css' }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <title>Welcome to Emergency room!</title>
   </head>
   <body>
+    <!--navbar-expand-sm-->
     
-    <div class="container-menu">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand ml-auto" href="#"><img src = "img/logo.jpg" height="40" width="40"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'incident_create' %}">ReportAccident</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./component/policepost.html">Emergencies</a></li>
+                    <li class="nav-item"><a class="nav-link" hre="./component/hospital.html">Data</a></li>  
+                    <li class="nav-item"><a class="nav-link" href="./component/hotel.html">Location Finder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./component/hotel.html">Directories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./component/hotel.html">JoinUs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./component/hotel.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!--<div class="container-menu">
         <div class="menu-bar">
             <ul class="mr-20">
                 <li><a href="index.html"></a>ZOIT</a></li>
@@ -29,53 +49,11 @@
 
             </ul>
             </div>
-    </div><br><br>
+    </div> -->
+    {% block content %}
+        <!-- Content Goes here -->
+    {% endblock content %}
 
-
-
-<!--    <div class="blogtitle">
-      <h1>NEWSOOM</h1>
-  </div>
-  <section class="posts">
-      <div class="post">
-          <img src="../ProjectOne - Copy/img/app3.png" alt="">
-          <h1>19 Persons Die in Lagos</h1>
-          <p>No fewer than 19 persons yesterday lost their lives in a fatal accident involving a fuel- laden tanker and 18-seater-passenger. .</p>
-          <button>Read more</button>
-      </div>
-      <div class="post">
-          <img src="../ProjectOne - Copy/img/app4.png" alt="">
-          <h1>Senior Army Officer Dies In Auto crash</h1>
-          <p>The late army officer died in an auto accident in Makurdi, Benue State, on Tuesday.
-
-            “Until his death, he was the Commanding Officer, 2 Battalion Kaduna,” an official....</p>
-          <button>Read more</button>
-      </div>
-      <div class="post">
-          <img src="../ProjectOne - Copy/img/app5.png" alt="">
-          <h1>Lagos Traffic Wahala</h1>
-          <p>In Lagos, traffic is ingrained in the city's psyche: an unavoidable stencil on daily life..... </p>
-          <button>Read more</button>
-      </div>
-      <div class="post">
-          <img src="{% static 'img/app6.png.url' %} alt="">
-          <h1>Inside Abia’s Broken Roads</h1>
-          <p>From the central park in Aba south local government area, motor cars moved gently through a crowd of impatient traders.....</p>
-          <button>Read more</button>
-      </div>
-  </section>
-  <section class="newsletter">
-      <div class="newsdesc">
-          <p>Keep your newsletter consistent by cooking up recurring topics, updated with new info in each.</p>
-      </div>
-      <form class="newsletterinputs" action="">
-          <input type="text" placeholder="Your Name">
-          <input type="Email" placeholder="Your Email">
-          <div class="submitDiv">
-              <input type="submit" value="Subscribe">
-          </div>
-      </form>
-    -->
 
     <div class="footer-container">
         <footer class="site-footer">
@@ -83,7 +61,7 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6">
                   <h6>Our Mission</h6>
-                  <p class="text-justify">ZOIT <i>Created for Accident Emergency purpose </i> 
+                  <p class="text-justify">LifeShield <i>Created for Accident Emergency purpose </i> 
                     is a social road accident response web-based application and targets four main functionalities: To inform road users accident-prone areas as well as real-time dangers on the road.   
                     Road users would be notified when approaching accident-prone areas or danger zones. Ability to locate and/ or report road injuries and death. Ability to analyse and visualize accident data to understand trends and causes of road injuries and deaths
                   </p>
@@ -116,7 +94,7 @@
               <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
                   <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
-               <a href="#">ZOIT</a>.
+               <a href="#">LifeShield</a>.
                   </p>
                 </div>
       
