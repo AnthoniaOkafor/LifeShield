@@ -14,13 +14,16 @@ def  home (request):
     #incident = Incident.objects.get(pk=1)
     return render(request,'index.html')
 
+def aboutus (request):
+    return render(request, 'aboutus.html')
+
 def incident_create(request):
     if request.method == 'POST':
 
        # lastvideo= Incident.objects.last()
         
         #videofile= lastvideo.videofile
-        
+
         #form = IncidentForm(request.POST)
         userform = IncidentForm(request.POST, request.FILES)
 

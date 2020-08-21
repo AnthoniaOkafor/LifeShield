@@ -1,6 +1,13 @@
+{% extends "base.html" %} 
+
 {% load bootstrap4 %}       {# import bootstrap4 #}
 {% bootstrap_css %}         {# Embed Bootstrap CSS #}
 {% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
+
+{% load static %}
+{% block content %}
+
+
 
 
 
@@ -12,7 +19,7 @@
     
         </div>
         <h1>Accident Form</h1>
-        <p>It is our collective responsibility to report an accident. By reporting accidents, relevant agencies monitor problems and identify their root causes. Reporting road accidents enable actions to be taken to reduce future ocurrences, and at LifeShield it takes less than 5 minutes to report an accident.</p>
+        <p class="mt-5">It is our collective responsibility to report an accident. By reporting accidents, relevant agencies monitor problems and identify their root causes. Reporting road accidents enable actions to be taken to reduce future ocurrences, and at LifeShield it takes less than 5 minutes to report an accident.</p>
         <form  enctype="multipart/form-data" method="POST" action="{% url 'incident_create' %}"
             method="post">
             {% csrf_token %}
@@ -24,3 +31,5 @@
         </form>
 
     </div>
+
+    {% endblock %}
