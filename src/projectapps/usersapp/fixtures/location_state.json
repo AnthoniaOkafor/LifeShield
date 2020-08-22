@@ -1,0 +1,229 @@
+[
+    {
+        "model": "usersapp.state",
+        "pk": 1,
+        "fields": {
+            "name": "FCT"
+        }
+    },
+    {
+        "model": "usersapp.state",
+        "pk": 2,
+        "fields": {
+            "name": "Abia"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 3,
+        "fields": {
+            "name": "Adamawa"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 4,
+        "fields": {
+            "name": "Akwa Ibom"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 5,
+        "fields": {
+            "name": "Anambra"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 6,
+        "fields": {
+            "name": "Bauchi"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 7,
+        "fields": {
+            "name": "Bayelsa"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 8,
+        "fields": {
+            "name": "Benue"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 9,
+        "fields": {
+            "name": "Borno"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 10,
+        "fields": {
+            "name": "Cross River"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 11,
+        "fields": {
+            "name": "Delta"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 12,
+        "fields": {
+            "name": "Ebonyi"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 13,
+        "fields": {
+            "name": "Enugu"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 14,
+        "fields": {
+            "name": "Edo"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 15,
+        "fields": {
+            "name": "Ekiti"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 16,
+        "fields": {
+            "name": "Gombe"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 17,
+        "fields": {
+            "name": "Imo"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 18,
+        "fields": {
+            "name": "Jigawa"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 19,
+        "fields": {
+            "name": "Kaduna"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 20,
+        "fields": {
+            "name": "Kano"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 21,
+        "fields": {
+            "name": "Katsina"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 22,
+        "fields": {
+            "name": "Kebbi"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 23,
+        "fields": {
+            "name": "Kogi"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 24,
+        "fields": {
+            "name": "Kwara"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 25,
+        "fields": {
+            "name": "Lagos"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 26,
+        "fields": {
+            "name": "Nasarawa"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 27,
+        "fields": {
+            "name": "Niger"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 28,
+        "fields": {
+            "name": "Ogun"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 29,
+        "fields": {
+            "name": "Ondo"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 30,
+        "fields": {
+            "name": "Osun"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 31,
+        "fields": {
+            "name": "Oyo"
+        }
+    },
+    {
+        "model": "usersapp.state",
+        "pk": 32,
+        "fields": {
+            "name": "Plateau"
+        }
+    },
+    {
+        "model": "usersapp.state",
+        "pk": 33,
+        "fields": {
+            "name": "Rivers"
+        }
+    },
+    {
+        "model": "usersapp.state",
+        "pk": 34,
+        "fields": {
+            "name": "Sokoto"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 35,
+        "fields": {
+            "name": "Taraba"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 36,
+        "fields": {
+            "name": "Yobe"
+        }
+    },{
+        "model": "usersapp.state",
+        "pk": 37,
+        "fields": {
+            "name": "Zamfara"
+        }
+    }
+]
