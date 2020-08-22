@@ -3,8 +3,10 @@ from django.utils import timezone
 
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import IncidentForm, PostForm
-from .models import Incident, Post
+from .forms import IncidentForm
+#, PostForm
+from .models import Incident
+#, Post
 from django.views.decorators.http import require_POST
 from .filters import ResponsesFilter
 
@@ -83,6 +85,7 @@ def search_responses(request):
     {'filter': response_filter
     })
 
+'''
 class PostCreate(generic.CreateView):
     # specify the model for create view 
     model = Post 
@@ -94,6 +97,11 @@ class PostCreate(generic.CreateView):
   
     fields = ['accident_location', 'local_government_area', 'address_or_nearest_landmark', 'content', 'imagefile']
 
+class PostList(generic.ListView):
+    model = Post
+    template_name = 'index.html'
+
 class PostDetail(generic.DetailView):
     model= Post
     template_name = 'post_detail.html'
+'''

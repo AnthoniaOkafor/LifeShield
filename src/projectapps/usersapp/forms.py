@@ -1,6 +1,7 @@
 from bootstrap_datepicker_plus import DatePickerInput, TimePickerInput
 from django.forms import ModelForm
-from .models import Incident, Post, State
+from .models import Incident 
+#,Post, State
 from django import forms
 
 class IncidentForm(ModelForm):
@@ -12,7 +13,7 @@ class IncidentForm(ModelForm):
                     # 'end_date': DatePickerInput(format='%Y-%m-%d'), # specify date-frmat
                     'time_of_accident': TimePickerInput(),
                 }
-
+'''
 class PostForm(ModelForm):
     class Meta:
         model = Post
@@ -21,3 +22,4 @@ class PostForm(ModelForm):
             'accident_location': forms.Select,
             #'accident_location': forms.CheckboxSelectMultiple
         }
+'''

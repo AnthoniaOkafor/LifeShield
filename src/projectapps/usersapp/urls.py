@@ -17,18 +17,19 @@ from django.contrib import admin
 from django.urls import path, re_path
 
 #connecting incident_create to usersapp
-from .views import home, incident_create, responder, search_responses, aboutus, PostCreate, PostDetail
+from .views import home, incident_create, responder, search_responses, aboutus
+#, PostCreate, PostList, PostDetail
 
 # helps with video and image upload
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', home, name='home'),
+   path('', home, name='home'),
     path('incident/create/', incident_create, name='incident_create'),
     path('responder', responder, name='responder'),
     path('search/responses/', search_responses, name='search_responses'),
     path('aboutus', aboutus, name='aboutus'),
-    path('post/create/', PostCreate.as_view(), name='post_create'),
-    #path('<pk>/', PostDetail.as_view(), name='post_detail'),
+  #  path('post/create/', PostCreate.as_view(), name='post_create'),
+   # path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
