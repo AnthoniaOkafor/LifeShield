@@ -252,7 +252,7 @@ class Incident(models.Model) :
                 raise ValidationError(
                     'Sum of male, female and child victims cannot be greater than number of victims'
         )
-'''
+
 class State (models.Model):
     statename = models.CharField(max_length=50, blank=False)
     objects = models.Manager()
@@ -267,11 +267,10 @@ class Post (models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     imagefile= models.FileField(upload_to='images/', null=True, blank=True, verbose_name="upload an image")
-    slug = models.SlugField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, null=True)
+    objects = models.Manager()
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
         return self.content + "" + self.accident_location
-
-    '''

@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-#connecting incident_create to usersapp
+#
 from .views import PostList, post_detail
 
 # helps with video upload

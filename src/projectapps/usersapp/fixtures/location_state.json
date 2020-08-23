@@ -3,227 +3,227 @@
         "model": "usersapp.state",
         "pk": 1,
         "fields": {
-            "name": "FCT"
+            "statename": "FCT"
         }
     },
     {
         "model": "usersapp.state",
         "pk": 2,
         "fields": {
-            "name": "Abia"
+            "statename": "Abia"
         }
     },{
         "model": "usersapp.state",
         "pk": 3,
         "fields": {
-            "name": "Adamawa"
+            "statename": "Adamawa"
         }
     },{
         "model": "usersapp.state",
         "pk": 4,
         "fields": {
-            "name": "Akwa Ibom"
+            "statename": "Akwa Ibom"
         }
     },{
         "model": "usersapp.state",
         "pk": 5,
         "fields": {
-            "name": "Anambra"
+            "statename": "Anambra"
         }
     },{
         "model": "usersapp.state",
         "pk": 6,
         "fields": {
-            "name": "Bauchi"
+            "statename": "Bauchi"
         }
     },{
         "model": "usersapp.state",
         "pk": 7,
         "fields": {
-            "name": "Bayelsa"
+            "statename": "Bayelsa"
         }
     },{
         "model": "usersapp.state",
         "pk": 8,
         "fields": {
-            "name": "Benue"
+            "statename": "Benue"
         }
     },{
         "model": "usersapp.state",
         "pk": 9,
         "fields": {
-            "name": "Borno"
+            "statename": "Borno"
         }
     },{
         "model": "usersapp.state",
         "pk": 10,
         "fields": {
-            "name": "Cross River"
+            "statename": "Cross River"
         }
     },{
         "model": "usersapp.state",
         "pk": 11,
         "fields": {
-            "name": "Delta"
+            "statename": "Delta"
         }
     },{
         "model": "usersapp.state",
         "pk": 12,
         "fields": {
-            "name": "Ebonyi"
+            "statename": "Ebonyi"
         }
     },{
         "model": "usersapp.state",
         "pk": 13,
         "fields": {
-            "name": "Enugu"
+            "statename": "Enugu"
         }
     },{
         "model": "usersapp.state",
         "pk": 14,
         "fields": {
-            "name": "Edo"
+            "statename": "Edo"
         }
     },{
         "model": "usersapp.state",
         "pk": 15,
         "fields": {
-            "name": "Ekiti"
+            "statename": "Ekiti"
         }
     },{
         "model": "usersapp.state",
         "pk": 16,
         "fields": {
-            "name": "Gombe"
+            "statename": "Gombe"
         }
     },{
         "model": "usersapp.state",
         "pk": 17,
         "fields": {
-            "name": "Imo"
+            "statename": "Imo"
         }
     },{
         "model": "usersapp.state",
         "pk": 18,
         "fields": {
-            "name": "Jigawa"
+            "statename": "Jigawa"
         }
     },{
         "model": "usersapp.state",
         "pk": 19,
         "fields": {
-            "name": "Kaduna"
+            "statename": "Kaduna"
         }
     },{
         "model": "usersapp.state",
         "pk": 20,
         "fields": {
-            "name": "Kano"
+            "statename": "Kano"
         }
     },{
         "model": "usersapp.state",
         "pk": 21,
         "fields": {
-            "name": "Katsina"
+            "statename": "Katsina"
         }
     },{
         "model": "usersapp.state",
         "pk": 22,
         "fields": {
-            "name": "Kebbi"
+            "statename": "Kebbi"
         }
     },{
         "model": "usersapp.state",
         "pk": 23,
         "fields": {
-            "name": "Kogi"
+            "statename": "Kogi"
         }
     },{
         "model": "usersapp.state",
         "pk": 24,
         "fields": {
-            "name": "Kwara"
+            "statename": "Kwara"
         }
     },{
         "model": "usersapp.state",
         "pk": 25,
         "fields": {
-            "name": "Lagos"
+            "statename": "Lagos"
         }
     },{
         "model": "usersapp.state",
         "pk": 26,
         "fields": {
-            "name": "Nasarawa"
+            "statename": "Nasarawa"
         }
     },{
         "model": "usersapp.state",
         "pk": 27,
         "fields": {
-            "name": "Niger"
+            "statename": "Niger"
         }
     },{
         "model": "usersapp.state",
         "pk": 28,
         "fields": {
-            "name": "Ogun"
+            "statename": "Ogun"
         }
     },{
         "model": "usersapp.state",
         "pk": 29,
         "fields": {
-            "name": "Ondo"
+            "statename": "Ondo"
         }
     },{
         "model": "usersapp.state",
         "pk": 30,
         "fields": {
-            "name": "Osun"
+            "statename": "Osun"
         }
     },{
         "model": "usersapp.state",
         "pk": 31,
         "fields": {
-            "name": "Oyo"
+            "statename": "Oyo"
         }
     },
     {
         "model": "usersapp.state",
         "pk": 32,
         "fields": {
-            "name": "Plateau"
+            "statename": "Plateau"
         }
     },
     {
         "model": "usersapp.state",
         "pk": 33,
         "fields": {
-            "name": "Rivers"
+            "statename": "Rivers"
         }
     },
     {
         "model": "usersapp.state",
         "pk": 34,
         "fields": {
-            "name": "Sokoto"
+            "statename": "Sokoto"
         }
     },{
         "model": "usersapp.state",
         "pk": 35,
         "fields": {
-            "name": "Taraba"
+            "statename": "Taraba"
         }
     },{
         "model": "usersapp.state",
         "pk": 36,
         "fields": {
-            "name": "Yobe"
+            "statename": "Yobe"
         }
     },{
         "model": "usersapp.state",
         "pk": 37,
         "fields": {
-            "name": "Zamfara"
+            "statename": "Zamfara"
         }
     }
 ]
