@@ -1,19 +1,27 @@
 import pytz
 from django.utils import timezone
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .forms import IncidentForm
-from .models import Incident
+#, PostForm
+from .models import Incident, Post
 from django.views.decorators.http import require_POST
 from .filters import ResponsesFilter
 
+
+#from django.views.generic.edit import CreateView 
+from django.views import generic
+
 # Create your views here.
+
 # add a new view function called incident_create
+#PostList will become the home page instead of the function home 
+'''
 def  home (request): 
     #incident = Incident.objects.get(pk=1)
     return render(request,'index.html')
-
+'''
 def aboutus (request):
     return render(request, 'aboutus.html')
 
@@ -79,3 +87,26 @@ def search_responses(request):
     'search_responses.html', 
     {'filter': response_filter
     })
+
+
+class PostCreate(generic.CreateView):
+    # specify the model for create view 
+    model = Post 
+  
+    # specify the template to be displayed 
+    template_name = 'post_create.html' 
+
+    # specify the fields to be displayed 
+  
+    fields = ['accident_location', 'local_government_area', 'address_or_nearest_landmark', 'content', 'imagefile']
+    def get_success_url(self):
+        return reverse('post_detail', kwargs={'pk': self.object.pk})
+
+
+class PostList(generic.ListView):
+    queryset = Post.objects.all().order_by('-created_on')
+    template_name = 'index.html'
+
+class PostDetail(generic.DetailView):
+    model= Post
+    template_name = 'post_detail.html'
