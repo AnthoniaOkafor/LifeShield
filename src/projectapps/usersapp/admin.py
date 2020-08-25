@@ -8,6 +8,12 @@ admin.site.register(State)
 
 class PostAdmin (admin.ModelAdmin):
     prepopulated_fields = {'slug': ('content',)}
+
+admin.site.register(Post, PostAdmin)
+
+'''
+class PostAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('content',)}
     def slugify_max(self, text, max_length=50):
         slug = slugify(text)
         if len(slug) <= max_length:
@@ -19,3 +25,15 @@ class PostAdmin (admin.ModelAdmin):
         return slug[:max_length]
     
 admin.site.register(Post, PostAdmin)
+
+
+from django.utils.text import slugify
+
+class ProductAdmin(admin.ModelAdmin):    
+    def save_model(self, request, obj, form, change):
+        # don't overwrite manually set slug
+        if form.cleaned_data['slug'] == "":
+            obj.slug = slugify(form.cleaned_data['brand']) + "-" + slugify(form.cleaned_data['name'])
+        obj.save()
+
+'''

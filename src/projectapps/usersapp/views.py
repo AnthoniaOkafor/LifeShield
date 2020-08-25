@@ -2,6 +2,7 @@ import pytz
 from django.utils import timezone
 
 from django.shortcuts import render, redirect, reverse
+from django.urls import reverse_lazy
 from django.contrib import messages
 from .forms import IncidentForm
 #, PostForm
@@ -100,7 +101,7 @@ class PostCreate(generic.CreateView):
   
     fields = ['accident_location', 'local_government_area', 'address_or_nearest_landmark', 'content', 'imagefile']
     def get_success_url(self):
-        return reverse('post_detail', kwargs={'slug': self.object.slug})
+        return reverse_lazy('post_detail', kwargs={'slug': self.object.slug})
 
 
 class PostList(generic.ListView):
