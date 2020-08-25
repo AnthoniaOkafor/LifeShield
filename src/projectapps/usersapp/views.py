@@ -100,7 +100,7 @@ class PostCreate(generic.CreateView):
   
     fields = ['accident_location', 'local_government_area', 'address_or_nearest_landmark', 'content', 'imagefile']
     def get_success_url(self):
-        return reverse('post_detail', kwargs={'pk': self.object.pk})
+        return reverse('post_detail', kwargs={'slug': self.object.slug})
 
 
 class PostList(generic.ListView):

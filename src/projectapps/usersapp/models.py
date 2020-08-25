@@ -267,11 +267,11 @@ class Post (models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     imagefile= models.FileField(upload_to='images/', null=True, blank=True, verbose_name="upload an image")
-    slug = models.SlugField(max_length=200, null=True)
+    slug = models.SlugField(max_length=200, unique=True)
     objects = models.Manager()
     class Meta:
         ordering = ['created_on']
 
     def __str__(self):
-        return self.content + "" + self.accident_location
+        return self.content + "" + self.local_government_area
 

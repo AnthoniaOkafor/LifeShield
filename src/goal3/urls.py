@@ -19,7 +19,8 @@ from django.urls import path, re_path, include
 urlpatterns = [
     path('', include('projectapps.usersapp.urls')), #appended projectsapp to usersapp
     path('myblog/', include('projectapps.myblog.urls')),
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    path('admin/index/', admin.site.urls),
     #using 're-path' instead of 'url'
     re_path(r'^tz_detect/', include('tz_detect.urls')),
 ]

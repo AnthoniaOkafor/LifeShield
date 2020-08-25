@@ -30,5 +30,5 @@ urlpatterns = [
     path('search/responses/', search_responses, name='search_responses'),
     path('aboutus', aboutus, name='aboutus'),
     path('post/create/', PostCreate.as_view(), name='post_create'),
-    #path('<pk>/', PostDetail.as_view(), name='post_detail'),
+    path('<slug:slug>/', PostDetail.as_view(), name='post_detail'),
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
