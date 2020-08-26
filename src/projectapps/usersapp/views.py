@@ -9,6 +9,7 @@ from .forms import IncidentForm
 from .models import Incident, Post
 from django.views.decorators.http import require_POST
 from .filters import ResponsesFilter
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 #from django.views.generic.edit import CreateView 
@@ -90,18 +91,20 @@ def search_responses(request):
     })
 
 
-class PostCreate(generic.CreateView):
+class PostCreate(SuccessMessageMixin, generic.CreateView):
     # specify the model for create view 
     model = Post 
   
     # specify the template to be displayed 
     template_name = 'post_create.html' 
+    success_message =  'Your post has been submitted'
 
     # specify the fields to be displayed 
   
     fields = ['accident_location', 'local_government_area', 'address_or_nearest_landmark', 'content', 'imagefile']
     def get_success_url(self):
-        return reverse_lazy('post_detail', kwargs={'slug': self.object.slug})
+        #return reverse_lazy('post_detail', kwargs={'slug': self.object.slug})
+        return reverse('post_create')
 
 
 class PostList(generic.ListView):

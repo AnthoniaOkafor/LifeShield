@@ -3,6 +3,7 @@ from multiselectfield import MultiSelectField
 from django.core.exceptions import ValidationError
 import pytz
 from datetime import date
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -272,6 +273,17 @@ class Post (models.Model):
     class Meta:
         ordering = ['created_on']
 
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.local_government_area) + "" + slugify(self.content)
+        snug = self.slug
+        if len(snug) <= 200:
+            return snug
+        else:
+            snug = snug[:200].rsplit('-', 1)[0]
+            return snug
+        # First word is > max_length chars, so we have to break it
+        super(Post, snug).save(*args, **kwargs)
+
     def __str__(self):
         return self.content + "" + self.local_government_area
-
+    
