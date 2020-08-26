@@ -3,6 +3,7 @@ from multiselectfield import MultiSelectField
 from django.core.exceptions import ValidationError
 import pytz
 from datetime import date
+from django.utils.text import slugify
 
 # Create your models here.
 
@@ -252,3 +253,37 @@ class Incident(models.Model) :
                 raise ValidationError(
                     'Sum of male, female and child victims cannot be greater than number of victims'
         )
+
+class State (models.Model):
+    statename = models.CharField(max_length=50, blank=False)
+    objects = models.Manager()
+
+    def __str__(self):
+        return self.statename
+
+class Post (models.Model):
+    accident_location=models.ForeignKey(State, on_delete=models.CASCADE)
+    local_government_area=models.CharField(max_length=25,null=False,blank=False, db_column='LGA')
+    address_or_nearest_landmark=models.CharField(max_length=50,null=False,blank=False, help_text="By landmark we mean somewhere notable such as bustop, market, hotel, hospital etc.", verbose_name="address and/or nearest landmark")
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    imagefile= models.FileField(upload_to='images/', null=True, blank=True, verbose_name="upload an image")
+    slug = models.SlugField(max_length=200, unique=True)
+    objects = models.Manager()
+    class Meta:
+        ordering = ['created_on']
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.local_government_area) + "" + slugify(self.content)
+        snug = self.slug
+        if len(snug) <= 200:
+            return snug
+        else:
+            snug = snug[:200].rsplit('-', 1)[0]
+            return snug
+        # First word is > max_length chars, so we have to break it
+        super(Post, snug).save(*args, **kwargs)
+
+    def __str__(self):
+        return self.content + "" + self.local_government_area
+    
