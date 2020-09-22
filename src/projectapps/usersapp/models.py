@@ -254,6 +254,7 @@ class Incident(models.Model) :
                     'Sum of male, female and child victims cannot be greater than number of victims'
         )
 
+# Model for users update
 class State (models.Model):
     statename = models.CharField(max_length=50, blank=False)
     objects = models.Manager()
@@ -273,6 +274,16 @@ class Post (models.Model):
     class Meta:
         ordering = ['created_on']
 
+    def __str__(self):
+        return self.content + "" + self.local_government_area
+
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.content)
+        super(Post, self).save(*args, **kwargs) 
+
+'''
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.local_government_area) + "" + slugify(self.content)
         snug = self.slug
@@ -282,8 +293,5 @@ class Post (models.Model):
             snug = snug[:200].rsplit('-', 1)[0]
             return snug
         # First word is > max_length chars, so we have to break it
-        super(Post, snug).save(*args, **kwargs)
-
-    def __str__(self):
-        return self.content + "" + self.local_government_area
-    
+        super(Post, self).save(*args, **kwargs)
+'''
