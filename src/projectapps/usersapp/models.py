@@ -277,13 +277,14 @@ class Post (models.Model):
     def __str__(self):
         return self.content + "" + self.local_government_area
 
-
     def save(self, *args, **kwargs):
         self.slug = slugify(self.content)
+        if len(self.slug) > 200:
+            self.slug = self.slug[:200].rsplit('/', 1)[0]
         super(Post, self).save(*args, **kwargs) 
 
-'''
 
+'''
     def save(self, *args, **kwargs):
         self.slug = slugify(self.local_government_area) + "" + slugify(self.content)
         snug = self.slug
