@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/index/', admin.site.urls),
     #using 're-path' instead of 'url'
     re_path(r'^tz_detect/', include('tz_detect.urls')),
+    path('accounts/', include('projectapps.accounts.urls'))
 ]

@@ -5,7 +5,6 @@ from django.shortcuts import render, redirect, reverse
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .forms import IncidentForm
-#, PostForm
 from .models import Incident, Post
 from django.views.decorators.http import require_POST
 from .filters import ResponsesFilter

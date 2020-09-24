@@ -1,4 +1,4 @@
-"""myblog URL Configuration.
+"""goal3 URL Configuration.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,15 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-#connecting created views to myblog
-from .views import PostList, post_detail
+#connecting created views to accounts app
+from .views import register, login, logout 
 
 # helps with video upload
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    #path('', PostList.as_view(), name='bloghome'),
-    path('index/', PostList.as_view(), name='bloghome'),
-    path('<slug:slug>/', post_detail, name='blogpost_detail'),
+    path('register', register, name='register'),
+    path('login', login, name='login'),
+    path('logout', logout, name='logout')
+   
 ]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

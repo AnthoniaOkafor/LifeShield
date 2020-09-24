@@ -1,4 +1,4 @@
-"""goal3 URL Configuration.
+"""usersapp URL Configuration.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 
-#connecting incident_create to usersapp
+#connecting created views to usersapp
 from .views import incident_create, responder, search_responses, aboutus, PostDetail, PostList, PostCreate
 
 # helps with video upload
