@@ -20,9 +20,14 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            {% if user.is_authenticated %}
+            <span class="orange-text"> Hello, {{ user.first_name}}</span>
+            <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
             <a class="navbar-link" href="{% url 'register' %}">Register</a>
             <a class="nav-link" href="{% url 'login' %}">Login</a>
-            <a class="nav-link" href="{% url 'logout' %}">Logout</a> 
+            {% endif %}
             <a class="navbar-brand ml-auto" href="#"><img src="{% static 'img/logo.png' %}" height="40" width="40"></a>
 
             <div class="collapse navbar-collapse" id="Navbar">
@@ -38,7 +43,7 @@
             </div>
         </div>
     </nav>
-   <br><br><br>
+    <br><br><br>
     <div class= "mb-5">
     <!--<div class="container-menu">
         <div class="menu-bar">

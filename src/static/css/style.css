@@ -26,6 +26,11 @@ nav {
   background-color:#3b5998 !important;
 }
 
+.orange-text {
+  color: orange !important;
+  margin-left: 5px;
+}
+
 .jumbotron {
   margin: 0px auto;
   padding: 90px 30px 15px;;
